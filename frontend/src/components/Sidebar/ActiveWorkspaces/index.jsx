@@ -93,7 +93,7 @@ export default function ActiveWorkspaces() {
         {(provided) => (
           <div
             role="list"
-            aria-label="Workspaces"
+            aria-label="Clients"
             className="flex flex-col gap-y-2"
             ref={provided.innerRef}
             {...provided.droppableProps}

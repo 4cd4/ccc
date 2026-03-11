@@ -13,12 +13,12 @@ export default function ImportedSkillList({
         <p>
           Learn about agent skills in the{" "}
           <a
-            href="https://docs.anythingllm.com/agent/custom/developer-guide"
+            href="https://github.com/4cd4/ccc/wiki/agent-skills"
             target="_blank"
             className="text-theme-text-secondary underline hover:text-cta-button"
             rel="noreferrer"
           >
-            AnythingLLM Agent Docs
+            VaultMind Agent Docs
           </a>
           .
         </p>

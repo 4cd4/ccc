@@ -79,65 +79,15 @@ import showToast from "@/utils/toast";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+// VaultMind: Only local/privacy-friendly LLM providers shown during onboarding.
+// Cloud providers are still available via settings if explicitly configured.
 const LLMS = [
-  {
-    name: "OpenAI",
-    value: "openai",
-    logo: OpenAiLogo,
-    options: (settings) => <OpenAiOptions settings={settings} />,
-    description: "The standard option for most non-commercial use.",
-  },
-  {
-    name: "Azure OpenAI",
-    value: "azure",
-    logo: AzureOpenAiLogo,
-    options: (settings) => <AzureAiOptions settings={settings} />,
-    description: "The enterprise option of OpenAI hosted on Azure services.",
-  },
-  {
-    name: "Anthropic",
-    value: "anthropic",
-    logo: AnthropicLogo,
-    options: (settings) => <AnthropicAiOptions settings={settings} />,
-    description: "A friendly AI Assistant hosted by Anthropic.",
-  },
-  {
-    name: "Gemini",
-    value: "gemini",
-    logo: GeminiLogo,
-    options: (settings) => <GeminiLLMOptions settings={settings} />,
-    description: "Google's largest and most capable AI model",
-  },
-  {
-    name: "NVIDIA NIM",
-    value: "nvidia-nim",
-    logo: NvidiaNimLogo,
-    options: (settings) => <NvidiaNimOptions settings={settings} />,
-    description:
-      "Run full parameter LLMs directly on your NVIDIA RTX GPU using NVIDIA NIM.",
-  },
-  {
-    name: "HuggingFace",
-    value: "huggingface",
-    logo: HuggingFaceLogo,
-    options: (settings) => <HuggingFaceOptions settings={settings} />,
-    description:
-      "Access 150,000+ open-source LLMs and the world's AI community",
-  },
   {
     name: "Ollama",
     value: "ollama",
     logo: OllamaLogo,
     options: (settings) => <OllamaLLMOptions settings={settings} />,
-    description: "Run LLMs locally on your own machine.",
-  },
-  {
-    name: "Dell Pro AI Studio",
-    value: "dpais",
-    logo: DellProAiStudioLogo,
-    options: (settings) => <DellProAiStudioOptions settings={settings} />,
-    description:
-      "Run powerful LLMs quickly on NPU powered by Dell Pro AI Studio.",
+    description: "Run LLMs locally on your own machine. (Recommended)",
   },
   {
     name: "LM Studio",
@@ -146,6 +96,27 @@ const LLMS = [
     options: (settings) => <LMStudioOptions settings={settings} />,
     description:
       "Discover, download, and run thousands of cutting edge LLMs in a few clicks.",
+  },
+  {
+    name: "Local AI",
+    value: "localai",
+    logo: LocalAiLogo,
+    options: (settings) => <LocalAiOptions settings={settings} />,
+    description: "Run LLMs locally on your own machine.",
+  },
+  {
+    name: "KoboldCPP",
+    value: "koboldcpp",
+    logo: KoboldCPPLogo,
+    options: (settings) => <KoboldCPPOptions settings={settings} />,
+    description: "Run local LLMs using koboldcpp.",
+  },
+  {
+    name: "Oobabooga Web UI",
+    value: "textgenwebui",
+    logo: TextGenWebUILogo,
+    options: (settings) => <TextGenWebUIOptions settings={settings} />,
+    description: "Run local LLMs using Oobabooga's Text Generation Web UI.",
   },
   {
     name: "Docker Model Runner",
@@ -163,136 +134,20 @@ const LLMS = [
       "Run local LLMs, ASR, TTS, and more in a single unified AI runtime.",
   },
   {
-    name: "Local AI",
-    value: "localai",
-    logo: LocalAiLogo,
-    options: (settings) => <LocalAiOptions settings={settings} />,
-    description: "Run LLMs locally on your own machine.",
-  },
-  {
-    name: "SambaNova",
-    value: "sambanova",
-    logo: SambaNovaLogo,
-    options: (settings) => <SambaNovaOptions settings={settings} />,
-    description: "Run open source models from SambaNova.",
-  },
-  {
-    name: "Novita AI",
-    value: "novita",
-    logo: NovitaLogo,
-    options: (settings) => <NovitaLLMOptions settings={settings} />,
+    name: "NVIDIA NIM",
+    value: "nvidia-nim",
+    logo: NvidiaNimLogo,
+    options: (settings) => <NvidiaNimOptions settings={settings} />,
     description:
-      "Reliable, Scalable, and Cost-Effective for LLMs from Novita AI",
+      "Run full parameter LLMs directly on your NVIDIA RTX GPU using NVIDIA NIM.",
   },
   {
-    name: "KoboldCPP",
-    value: "koboldcpp",
-    logo: KoboldCPPLogo,
-    options: (settings) => <KoboldCPPOptions settings={settings} />,
-    description: "Run local LLMs using koboldcpp.",
-  },
-  {
-    name: "Oobabooga Web UI",
-    value: "textgenwebui",
-    logo: TextGenWebUILogo,
-    options: (settings) => <TextGenWebUIOptions settings={settings} />,
-    description: "Run local LLMs using Oobabooga's Text Generation Web UI.",
-  },
-  {
-    name: "Together AI",
-    value: "togetherai",
-    logo: TogetherAILogo,
-    options: (settings) => <TogetherAiOptions settings={settings} />,
-    description: "Run open source models from Together AI.",
-  },
-  {
-    name: "Fireworks AI",
-    value: "fireworksai",
-    logo: FireworksAILogo,
-    options: (settings) => <FireworksAiOptions settings={settings} />,
+    name: "Dell Pro AI Studio",
+    value: "dpais",
+    logo: DellProAiStudioLogo,
+    options: (settings) => <DellProAiStudioOptions settings={settings} />,
     description:
-      "The fastest and most efficient inference engine to build production-ready, compound AI systems.",
-  },
-  {
-    name: "Mistral",
-    value: "mistral",
-    logo: MistralLogo,
-    options: (settings) => <MistralOptions settings={settings} />,
-    description: "Run open source models from Mistral AI.",
-  },
-  {
-    name: "Perplexity AI",
-    value: "perplexity",
-    logo: PerplexityLogo,
-    options: (settings) => <PerplexityOptions settings={settings} />,
-    description:
-      "Run powerful and internet-connected models hosted by Perplexity AI.",
-  },
-  {
-    name: "OpenRouter",
-    value: "openrouter",
-    logo: OpenRouterLogo,
-    options: (settings) => <OpenRouterOptions settings={settings} />,
-    description: "A unified interface for LLMs.",
-  },
-  {
-    name: "Groq",
-    value: "groq",
-    logo: GroqLogo,
-    options: (settings) => <GroqAiOptions settings={settings} />,
-    description:
-      "The fastest LLM inferencing available for real-time AI applications.",
-  },
-  {
-    name: "Cohere",
-    value: "cohere",
-    logo: CohereLogo,
-    options: (settings) => <CohereAiOptions settings={settings} />,
-    description: "Run Cohere's powerful Command models.",
-  },
-  {
-    name: "LiteLLM",
-    value: "litellm",
-    logo: LiteLLMLogo,
-    options: (settings) => <LiteLLMOptions settings={settings} />,
-    description: "Run LiteLLM's OpenAI compatible proxy for various LLMs.",
-  },
-  {
-    name: "DeepSeek",
-    value: "deepseek",
-    logo: DeepSeekLogo,
-    options: (settings) => <DeepSeekOptions settings={settings} />,
-    description: "Run DeepSeek's powerful LLMs.",
-  },
-  {
-    name: "PPIO",
-    value: "ppio",
-    logo: PPIOLogo,
-    options: (settings) => <PPIOLLMOptions settings={settings} />,
-    description:
-      "Run stable and cost-efficient open-source LLM APIs, such as DeepSeek, Llama, Qwen etc.",
-  },
-  {
-    name: "APIpie",
-    value: "apipie",
-    logo: APIPieLogo,
-    options: (settings) => <ApiPieLLMOptions settings={settings} />,
-    description: "A unified API of AI services from leading providers",
-  },
-  {
-    name: "Generic OpenAI",
-    value: "generic-openai",
-    logo: GenericOpenAiLogo,
-    options: (settings) => <GenericOpenAiOptions settings={settings} />,
-    description:
-      "Connect to any OpenAi-compatible service via a custom configuration",
-  },
-  {
-    name: "AWS Bedrock",
-    value: "bedrock",
-    logo: AWSBedrockLogo,
-    options: (settings) => <AWSBedrockLLMOptions settings={settings} />,
-    description: "Run powerful foundation models privately with AWS Bedrock.",
+      "Run powerful LLMs quickly on NPU powered by Dell Pro AI Studio.",
   },
   {
     name: "Privatemode",
@@ -302,39 +157,12 @@ const LLMS = [
     description: "Run LLMs with end-to-end encryption.",
   },
   {
-    name: "xAI",
-    value: "xai",
-    logo: XAILogo,
-    options: (settings) => <XAILLMOptions settings={settings} />,
-    description: "Run xAI's powerful LLMs like Grok-2 and more.",
-  },
-  {
-    name: "Z.AI",
-    value: "zai",
-    logo: ZAiLogo,
-    options: (settings) => <ZAiLLMOptions settings={settings} />,
-    description: "Run Z.AI's powerful GLM models.",
-  },
-  {
-    name: "Moonshot AI",
-    value: "moonshotai",
-    logo: MoonshotAiLogo,
-    options: (settings) => <MoonshotAiOptions settings={settings} />,
-    description: "Run Moonshot AI's powerful LLMs.",
-  },
-  {
-    name: "CometAPI",
-    value: "cometapi",
-    logo: CometApiLogo,
-    options: (settings) => <CometApiLLMOptions settings={settings} />,
-    description: "500+ AI Models all in one API.",
-  },
-  {
-    name: "GiteeAI",
-    value: "giteeai",
-    logo: GiteeAILogo,
-    options: (settings) => <GiteeAiOptions settings={settings} />,
-    description: "Run GiteeAI's powerful LLMs.",
+    name: "Generic OpenAI",
+    value: "generic-openai",
+    logo: GenericOpenAiLogo,
+    options: (settings) => <GenericOpenAiOptions settings={settings} />,
+    description:
+      "Connect to any OpenAI-compatible service via a custom configuration.",
   },
 ];
 
@@ -350,7 +178,7 @@ export default function LLMPreference({
   const [settings, setSettings] = useState(null);
   const formRef = useRef(null);
   const hiddenSubmitButtonRef = useRef(null);
-  const isHosted = window.location.hostname.includes("useanything.com");
+  const isHosted = false; // VaultMind is always self-hosted
   const navigate = useNavigate();
 
   const TITLE = t("onboarding.llm.title");
@@ -360,7 +188,7 @@ export default function LLMPreference({
     async function fetchKeys() {
       const _settings = await System.keys();
       setSettings(_settings);
-      setSelectedLLM(_settings?.LLMProvider || "openai");
+      setSelectedLLM(_settings?.LLMProvider || "ollama");
     }
     fetchKeys();
   }, []);
@@ -388,7 +216,7 @@ export default function LLMPreference({
     const data = {};
     const formData = new FormData(form);
     data.LLMProvider = selectedLLM;
-    // Default to AnythingLLM embedder and LanceDB
+    // Default to VaultMind native embedder and LanceDB (local-first)
     data.EmbeddingEngine = "native";
     data.VectorDB = "lancedb";
     for (var [key, value] of formData.entries()) data[key] = value;

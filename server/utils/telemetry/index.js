@@ -1,14 +1,12 @@
 const { getGitVersion } = require("../../endpoints/utils");
 const { Telemetry } = require("../../models/telemetry");
 
-// Telemetry is anonymized and your data is never read. This can be disabled by setting
-// DISABLE_TELEMETRY=true in the `.env` of however you setup. Telemetry helps us determine use
-// of how AnythingLLM is used and how to improve this product!
-// You can see all Telemetry events by ctrl+f `Telemetry.sendTelemetry` calls to verify this claim.
+// VaultMind: Telemetry is DISABLED by default for privacy-first operation.
+// Set DISABLE_TELEMETRY=false in your .env to opt-in to anonymous usage telemetry.
 async function setupTelemetry() {
-  if (process.env.DISABLE_TELEMETRY === "true") {
+  if ((process.env.DISABLE_TELEMETRY ?? "true") === "true") {
     console.log(
-      `\x1b[31m[TELEMETRY DISABLED]\x1b[0m Telemetry is marked as disabled - no events will send. Telemetry helps Mintplex Labs Inc improve AnythingLLM.`
+      `\x1b[31m[TELEMETRY DISABLED]\x1b[0m Telemetry is disabled. VaultMind is privacy-first — no data is sent externally.`
     );
     return true;
   }
@@ -21,7 +19,7 @@ async function setupTelemetry() {
   }
 
   console.log(
-    `\x1b[32m[TELEMETRY ENABLED]\x1b[0m Anonymous Telemetry enabled. Telemetry helps Mintplex Labs Inc improve AnythingLLM.`
+    `\x1b[32m[TELEMETRY ENABLED]\x1b[0m Anonymous Telemetry enabled. You can disable this by setting DISABLE_TELEMETRY=true.`
   );
   await Telemetry.findOrCreateId();
   await Telemetry.sendTelemetry("server_boot", {

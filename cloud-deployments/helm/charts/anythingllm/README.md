@@ -1,10 +1,10 @@
-# anythingllm
+# vaultmind
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.85.0](https://img.shields.io/badge/AppVersion-1.85.0-informational?style=flat-square)
 
-![AnythingLLM](https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/master/images/wordmark.png)
+![VaultMind](https://raw.githubusercontent.com/4cd4/ccc/master/images/wordmark.png)
 
-[AnythingLLM](https://github.com/Mintplex-Labs/anything-llm)
+[VaultMind](https://github.com/4cd4/ccc)
 
 The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, No-code agent builder, MCP compatibility, and more.
 
@@ -78,7 +78,7 @@ persistentVolume:
 Install with:
 
 ```
-helm install my-anythingllm ./anythingllm -f values-secret.yaml
+helm install my-vaultmind ./vaultmind -f values-secret.yaml
 ```
 
 **Best practices & tips**

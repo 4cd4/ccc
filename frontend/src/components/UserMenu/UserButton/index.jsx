@@ -54,7 +54,7 @@ export default function UserButton() {
       setSupportEmail(
         supportEmail?.email
           ? `mailto:${supportEmail.email}`
-          : paths.mailToMintplex()
+          : "mailto:support@vaultmind.app"
       );
     };
     fetchSupportEmail();

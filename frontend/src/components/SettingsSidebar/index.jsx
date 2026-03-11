@@ -186,7 +186,7 @@ export default function SettingsSidebar() {
 }
 
 function SupportEmail() {
-  const [supportEmail, setSupportEmail] = useState(paths.mailToMintplex());
+  const [supportEmail, setSupportEmail] = useState("mailto:support@vaultmind.app");
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -195,7 +195,7 @@ function SupportEmail() {
       setSupportEmail(
         supportEmail?.email
           ? `mailto:${supportEmail.email}`
-          : paths.mailToMintplex()
+          : "mailto:support@vaultmind.app"
       );
     };
     fetchSupportEmail();
@@ -307,36 +307,7 @@ const SidebarOptions = ({ user = null, t }) => (
           flex={true}
           roles={["admin"]}
         />
-        <Option
-          btnText={t("settings.community-hub.title")}
-          icon={
-            <img
-              src={CommunityHubIcon}
-              alt="Community Hub"
-              className="h-5 w-5 flex-shrink-0 light:invert"
-            />
-          }
-          childOptions={[
-            {
-              btnText: t("settings.community-hub.trending"),
-              href: paths.communityHub.trending(),
-              flex: true,
-              roles: ["admin"],
-            },
-            {
-              btnText: t("settings.community-hub.your-account"),
-              href: paths.communityHub.authentication(),
-              flex: true,
-              roles: ["admin"],
-            },
-            {
-              btnText: t("settings.community-hub.import-item"),
-              href: paths.communityHub.importItem(),
-              flex: true,
-              roles: ["admin"],
-            },
-          ]}
-        />
+        {/* Community Hub removed for VaultMind - privacy-first */}
         <Option
           btnText={t("settings.customization")}
           icon={<PencilSimpleLine className="h-5 w-5 flex-shrink-0" />}
@@ -368,13 +339,6 @@ const SidebarOptions = ({ user = null, t }) => (
           user={user}
           childOptions={[
             {
-              hidden: !canViewChatHistory,
-              btnText: t("settings.embeds"),
-              href: paths.settings.embedChatWidgets(),
-              flex: true,
-              roles: ["admin"],
-            },
-            {
               btnText: t("settings.event-logs"),
               href: paths.settings.logs(),
               flex: true,
@@ -389,18 +353,6 @@ const SidebarOptions = ({ user = null, t }) => (
             {
               btnText: t("settings.system-prompt-variables"),
               href: paths.settings.systemPromptVariables(),
-              flex: true,
-              roles: ["admin"],
-            },
-            {
-              btnText: t("settings.browser-extension"),
-              href: paths.settings.browserExtension(),
-              flex: true,
-              roles: ["admin", "manager"],
-            },
-            {
-              btnText: t("settings.mobile-app"),
-              href: paths.settings.mobile(),
               flex: true,
               roles: ["admin"],
             },
@@ -434,7 +386,7 @@ function HoldToReveal({ children, holdForMs = 3_000 }) {
   let timeout = null;
   const [showing, setShowing] = useState(
     window.localStorage.getItem(
-      "anythingllm_experimental_feature_preview_unlocked"
+      "vaultmind_experimental_feature_preview_unlocked"
     )
   );
 
@@ -446,7 +398,7 @@ function HoldToReveal({ children, holdForMs = 3_000 }) {
         // Setting toastId prevents hook spam from holding control too many times or the event not detaching
         showToast("Experimental feature previews unlocked!");
         window.localStorage.setItem(
-          "anythingllm_experimental_feature_preview_unlocked",
+          "vaultmind_experimental_feature_preview_unlocked",
           "enabled"
         );
         window.removeEventListener("keypress", onPress);
@@ -484,7 +436,7 @@ function AppVersion() {
   if (isLoading) return null;
   return (
     <Link
-      to={`https://github.com/Mintplex-Labs/anything-llm/releases/tag/v${version}`}
+      to={`https://github.com/4cd4/ccc/releases/tag/v${version}`}
       target="_blank"
       rel="noreferrer"
       className="text-theme-text-secondary light:opacity-80 opacity-50 text-xs mx-3"

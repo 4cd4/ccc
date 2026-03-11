@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "Preferência de LLM",
       description:
-        "AnythingLLM funciona com vários provedores de LLM. Este será o serviço que lidará com os chats.",
+        "VaultMind funciona com vários provedores de LLM. Este será o serviço que lidará com os chats.",
     },
     userSetup: {
       title: "Configuração do Usuário",
@@ -35,14 +35,14 @@ const TRANSLATIONS = {
         "Estas configurações podem ser alteradas a qualquer momento.",
     },
     survey: {
-      title: "Bem-vindo ao AnythingLLM",
-      description: "Ajude-nos a melhorar o AnythingLLM. Opcional.",
+      title: "Bem-vindo ao VaultMind",
+      description: "Ajude-nos a melhorar o VaultMind. Opcional.",
       email: "Qual seu email?",
-      useCase: "Como você usará o AnythingLLM?",
+      useCase: "Como você usará o VaultMind?",
       useCaseWork: "Para trabalho",
       useCasePersonal: "Uso pessoal",
       useCaseOther: "Outro",
-      comment: "Como você conheceu o AnythingLLM?",
+      comment: "Como você conheceu o VaultMind?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube, etc. - Conte como nos encontrou!",
       skip: "Pular Pesquisa",
@@ -50,7 +50,7 @@ const TRANSLATIONS = {
     },
   },
   common: {
-    "workspaces-name": "Nome do Workspace",
+    "workspaces-name": "Nome do Client",
     user: "Usuário",
     selection: "Seleção de Modelo",
     saving: "Salvando...",
@@ -68,8 +68,8 @@ const TRANSLATIONS = {
     title: "Configurações da Instância",
     invites: "Convites",
     users: "Usuários",
-    workspaces: "Workspaces",
-    "workspace-chats": "Chats do Workspace",
+    workspaces: "Clients",
+    "workspace-chats": "Chats do Client",
     customization: "Personalização",
     interface: "Preferências de UI",
     branding: "Marca e Etiqueta Branca",
@@ -93,7 +93,7 @@ const TRANSLATIONS = {
     "experimental-features": "Recursos Experimentais",
     contact: "Suporte",
     "browser-extension": "Extensão de Navegador",
-    "mobile-app": "AnythingLLM Mobile",
+    "mobile-app": "VaultMind Mobile",
     "community-hub": {
       title: "Centro Comunitário",
       trending: "Explore as tendências",
@@ -129,8 +129,8 @@ const TRANSLATIONS = {
     greeting: "Como posso ajudá-lo hoje?",
   },
   "new-workspace": {
-    title: "Novo Workspace",
-    placeholder: "Meu Workspace",
+    title: "Novo Client",
+    placeholder: "Meu Client",
   },
   "workspaces—settings": {
     general: "Configurações Gerais",
@@ -145,7 +145,7 @@ const TRANSLATIONS = {
       description: "Número total de vetores no seu banco de dados.",
     },
     names: {
-      description: "Isso altera apenas o nome exibido do seu workspace.",
+      description: "Isso altera apenas o nome exibido do seu client.",
     },
     message: {
       title: "Sugestões de Chat",
@@ -154,14 +154,14 @@ const TRANSLATIONS = {
       add: "Adicionar mensagem",
       save: "Salvar Mensagens",
       heading: "Explique para mim",
-      body: "os benefícios do AnythingLLM",
+      body: "os benefícios do VaultMind",
     },
     delete: {
-      title: "Excluir Workspace",
+      title: "Excluir Client",
       description:
         "Exclua este workspace e todos seus dados. Isso afetará todos os usuários.",
-      delete: "Excluir Workspace",
-      deleting: "Excluindo Workspace...",
+      delete: "Excluir Client",
+      deleting: "Excluindo Client...",
       "confirm-start": "Você está prestes a excluir todo o",
       "confirm-end":
         "workspace. Isso removerá todos os vetores do banco de dados.\n\nOs arquivos originais permanecerão intactos. Esta ação é irreversível.",
@@ -267,17 +267,17 @@ const TRANSLATIONS = {
     "performance-warning":
       "O desempenho de LLMs sem suporte a tool-calling varia conforme as capacidades do modelo. Algumas funcionalidades podem ser limitadas.",
     provider: {
-      title: "Provedor LLM de Agente de Workspace",
+      title: "Provedor LLM de Agente de Client",
       description:
         "O provedor LLM e modelo específico que será usado por este agente @agent deste workspace.",
     },
     mode: {
       chat: {
-        title: "Modelo de Chat para Agente de workspace",
+        title: "Modelo de Chat para Agente de client",
         description:
           "O modelo de chat específico para o agente @agent deste workspace.",
       },
-      title: "Modelo para Agente de workspace",
+      title: "Modelo para Agente de client",
       description:
         "O modelo LLM específico que será usado pelo agente @agent deste workspace.",
       wait: "-- aguardando modelos --",
@@ -322,14 +322,14 @@ const TRANSLATIONS = {
     },
   },
   recorded: {
-    title: "Chats do Workspace",
+    title: "Chats do Client",
     description:
       "Todos os chats registrados enviados por usuários, ordenados por data de criação.",
     export: "Exportar",
     table: {
       id: "ID",
       by: "Enviado Por",
-      workspace: "Workspace",
+      workspace: "Client",
       prompt: "Prompt",
       response: "Resposta",
       at: "Enviado Em",
@@ -342,7 +342,7 @@ const TRANSLATIONS = {
     },
     branding: {
       title: "Marca & Etiqueta Branca",
-      description: "Personalize sua instância do AnythingLLM com sua marca.",
+      description: "Personalize sua instância do VaultMind com sua marca.",
     },
     chat: {
       title: "Chat",
@@ -465,7 +465,7 @@ const TRANSLATIONS = {
       "Credenciais e configurações do seu provedor de transcrição. Essas chaves devem estar corretas para processar arquivos de mídia.",
     provider: "Provedor de Transcrição",
     "warn-start":
-      "Usar o modelo local whisper em máquinas com RAM ou CPU limitada pode travar o AnythingLLM.",
+      "Usar o modelo local whisper em máquinas com RAM ou CPU limitada pode travar o VaultMind.",
     "warn-recommend": "Recomendamos pelo menos 2GB de RAM e arquivos <10Mb.",
     "warn-end":
       "O modelo interno será baixado automaticamente no primeiro uso.",
@@ -511,7 +511,7 @@ const TRANSLATIONS = {
       "Widgets de chat vinculadas são interfaces de chats públicos ligadas a um único workspace. Isto permite construir workspaces e publicá-los na web.",
     create: "Criar vínculo",
     table: {
-      workspace: "Workspace",
+      workspace: "Client",
       chats: "Chats Enviados",
       active: "Domínios Ativos",
       created: "Criado Em",
@@ -543,7 +543,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Privacidade & Dados",
     description:
-      "Configurações de como provedores terceiros e o AnythingLLM lidam com seus dados.",
+      "Configurações de como provedores terceiros e o VaultMind lidam com seus dados.",
     anonymous: "Telemetria Anônima Ativa",
   },
   connectors: {
@@ -685,7 +685,7 @@ const TRANSLATIONS = {
       "new-folder": "Nova Pasta",
       "search-document": "Buscar documento",
       "no-documents": "Nenhum Documento",
-      "move-workspace": "Mover para Workspace",
+      "move-workspace": "Mover para Client",
       "delete-confirmation":
         "Tem certeza que deseja excluir estes arquivos e pastas?\nIsso removerá os arquivos do sistema e de todos os workspaces automaticamente.\nEsta ação é irreversível.",
       "removing-message":
@@ -709,7 +709,7 @@ const TRANSLATIONS = {
       fetching: "Buscando...",
       "fetch-website": "Buscar site",
       "privacy-notice":
-        "Esses arquivos são enviados ao processador local do AnythingLLM. Não são compartilhados com terceiros.",
+        "Esses arquivos são enviados ao processador local do VaultMind. Não são compartilhados com terceiros.",
     },
     pinning: {
       what_pinning: "O que é fixar documento?",
@@ -740,7 +740,7 @@ const TRANSLATIONS = {
     attach_file: "Anexar arquivo ao chat",
     text_size: "Alterar tamanho do texto.",
     microphone: "Fale seu prompt.",
-    send: "Enviar prompt para o workspace",
+    send: "Enviar prompt para o client",
     tts_speak_message: "Leitura em voz alta da mensagem",
     copy: "Copiar",
     regenerate: "Regerar",
@@ -766,10 +766,10 @@ const TRANSLATIONS = {
     large: "Grande",
     workspace_llm_manager: {
       search: "Buscar provedores de LLM",
-      loading_workspace_settings: "Carregando configurações do workspace...",
+      loading_workspace_settings: "Carregando configurações do client...",
       available_models: "Modelos Disponíveis",
-      available_models_description: "Selecione um modelo para este workspace",
-      save: "Salvar modelo do workspace",
+      available_models_description: "Selecione um modelo para este client",
+      save: "Salvar modelo do client",
       saving: "Salvando...",
       missing_credentials: "Credenciais em falta",
       missing_credentials_description:
@@ -830,9 +830,9 @@ const TRANSLATIONS = {
     title: "Atalhos de Teclado",
     shortcuts: {
       settings: "Ajustes",
-      workspaceSettings: "Abrir os ajustes do workspace",
+      workspaceSettings: "Abrir os ajustes do client",
       home: "Ir para a página inicial",
-      workspaces: "Gerenciar workspaces",
+      workspaces: "Gerenciar clients",
       apiKeys: "Ajustes das chaves da API",
       llmPreferences: "Preferências do LLM",
       chatSettings: "Ajustes do chat",
@@ -952,7 +952,7 @@ const TRANSLATIONS = {
     chooseWorkspace: "Escolha um espaço de trabalho para começar a conversar!",
     notAssigned:
       "Você ainda não está atribuído a nenhum espaço de trabalho.\nEntre em contato com seu administrador para solicitar acesso a um espaço de trabalho.",
-    goToWorkspace: 'Ir para o espaço de trabalho "{{workspace}}"',
+    goToWorkspace: 'Ir para o espaço de trabalho "{{client}}"',
   },
 };
 

@@ -25,7 +25,7 @@ class PPIOLLM {
       baseURL: this.basePath,
       apiKey: process.env.PPIO_API_KEY ?? null,
       defaultHeaders: {
-        "HTTP-Referer": "https://anythingllm.com",
+        "HTTP-Referer": "https://github.com/4cd4/ccc",
         "X-API-Source": "anythingllm",
       },
     });

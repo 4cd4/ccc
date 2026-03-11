@@ -7,7 +7,7 @@ const TRANSLATIONS = {
     llm: {
       title: "LLM Preference",
       description:
-        "AnythingLLM can work with many LLM providers. This will be the service which handles chatting.",
+        "VaultMind can work with many LLM providers. This will be the service which handles chatting.",
     },
     userSetup: {
       title: "User Setup",
@@ -34,14 +34,14 @@ const TRANSLATIONS = {
         "These settings can be reconfigured at any time in the settings.",
     },
     survey: {
-      title: "Welcome to AnythingLLM",
-      description: "Help us make AnythingLLM built for your needs. Optional.",
+      title: "Welcome to VaultMind",
+      description: "Help us make VaultMind built for your needs. Optional.",
       email: "What's your email?",
-      useCase: "What will you use AnythingLLM for?",
+      useCase: "What will you use VaultMind for?",
       useCaseWork: "For work",
       useCasePersonal: "For personal use",
       useCaseOther: "Other",
-      comment: "How did you hear about AnythingLLM?",
+      comment: "How did you hear about VaultMind?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube, etc. - Let us know how you found us!",
       skip: "Skip Survey",
@@ -49,7 +49,7 @@ const TRANSLATIONS = {
     },
   },
   common: {
-    "workspaces-name": "Workspace Name",
+    "workspaces-name": "Client Name",
     user: "User",
     selection: "Model Selection",
     saving: "Saving...",
@@ -65,17 +65,17 @@ const TRANSLATIONS = {
   },
   home: {
     welcome: "Welcome",
-    chooseWorkspace: "Choose a workspace to start chatting!",
+    chooseWorkspace: "Choose a client to start chatting!",
     notAssigned:
-      "You currently aren't assigned to any workspaces.\nPlease contact your administrator to request access to a workspace.",
+      "You currently aren't assigned to any clients.\nPlease contact your administrator to request access to a client.",
     goToWorkspace: 'Go to "{{workspace}}"',
   },
   settings: {
     title: "Instance Settings",
     invites: "Invites",
     users: "Users",
-    workspaces: "Workspaces",
-    "workspace-chats": "Workspace Chats",
+    workspaces: "Clients",
+    "workspace-chats": "Client Chats",
     customization: "Customization",
     interface: "UI Preferences",
     branding: "Branding & Whitelabeling",
@@ -105,7 +105,7 @@ const TRANSLATIONS = {
     "experimental-features": "Experimental Features",
     contact: "Contact Support",
     "browser-extension": "Browser Extension",
-    "mobile-app": "AnythingLLM Mobile",
+    "mobile-app": "VaultMind Mobile App",
   },
   login: {
     "multi-user": {
@@ -131,13 +131,13 @@ const TRANSLATIONS = {
     greeting: "How can I help you today?",
     quickActions: {
       createAgent: "Create an Agent",
-      editWorkspace: "Edit Workspace",
+      editWorkspace: "Edit Client",
       uploadDocument: "Upload a Document",
     },
   },
   "new-workspace": {
-    title: "New Workspace",
-    placeholder: "My Workspace",
+    title: "New Client",
+    placeholder: "My Client",
   },
   "workspaces—settings": {
     general: "General Settings",
@@ -152,39 +152,39 @@ const TRANSLATIONS = {
       description: "Total number of vectors in your vector database.",
     },
     names: {
-      description: "This will only change the display name of your workspace.",
+      description: "This will only change the display name of your client.",
     },
     message: {
       title: "Suggested Chat Messages",
       description:
-        "Customize the messages that will be suggested to your workspace users.",
+        "Customize the messages that will be suggested to your client users.",
       add: "Add new message",
       save: "Save Messages",
       heading: "Explain to me",
-      body: "the benefits of AnythingLLM",
+      body: "the benefits of VaultMind",
     },
     delete: {
-      title: "Delete Workspace",
+      title: "Delete Client",
       description:
-        "Delete this workspace and all of its data. This will delete the workspace for all users.",
-      delete: "Delete Workspace",
-      deleting: "Deleting Workspace...",
+        "Delete this client and all of its data. This will delete the client for all users.",
+      delete: "Delete Client",
+      deleting: "Deleting Client...",
       "confirm-start": "You are about to delete your entire",
       "confirm-end":
-        "workspace. This will remove all vector embeddings in your vector database.\n\nThe original source files will remain untouched. This action is irreversible.",
+        "client. This will remove all vector embeddings in your vector database.\n\nThe original source files will remain untouched. This action is irreversible.",
     },
   },
   chat: {
     llm: {
-      title: "Workspace LLM Provider",
+      title: "Client LLM Provider",
       description:
-        "The specific LLM provider & model that will be used for this workspace. By default, it uses the system LLM provider and settings.",
+        "The specific LLM provider & model that will be used for this client. By default, it uses the system LLM provider and settings.",
       search: "Search all LLM providers",
     },
     model: {
-      title: "Workspace Chat model",
+      title: "Client Chat model",
       description:
-        "The specific chat model that will be used for this workspace. If empty, will use the system LLM preference.",
+        "The specific chat model that will be used for this client. If empty, will use the system LLM preference.",
     },
     mode: {
       title: "Chat mode",
@@ -266,28 +266,28 @@ const TRANSLATIONS = {
       reset: "Reset Vector Database",
       resetting: "Clearing vectors...",
       confirm:
-        "You are about to reset this workspace's vector database. This will remove all vector embeddings currently embedded.\n\nThe original source files will remain untouched. This action is irreversible.",
-      error: "Workspace vector database could not be reset!",
-      success: "Workspace vector database was reset!",
+        "You are about to reset this client's vector database. This will remove all vector embeddings currently embedded.\n\nThe original source files will remain untouched. This action is irreversible.",
+      error: "Client vector database could not be reset!",
+      success: "Client vector database was reset!",
     },
   },
   agent: {
     "performance-warning":
       "Performance of LLMs that do not explicitly support tool-calling is highly dependent on the model's capabilities and accuracy. Some abilities may be limited or non-functional.",
     provider: {
-      title: "Workspace Agent LLM Provider",
+      title: "Client Agent LLM Provider",
       description:
-        "The specific LLM provider & model that will be used for this workspace's @agent agent.",
+        "The specific LLM provider & model that will be used for this client's @agent agent.",
     },
     mode: {
       chat: {
-        title: "Workspace Agent Chat model",
+        title: "Client Agent Chat model",
         description:
-          "The specific chat model that will be used for this workspace's @agent agent.",
+          "The specific chat model that will be used for this client's @agent agent.",
       },
-      title: "Workspace Agent model",
+      title: "Client Agent model",
       description:
-        "The specific LLM model that will be used for this workspace's @agent agent.",
+        "The specific LLM model that will be used for this client's @agent agent.",
       wait: "-- waiting for models --",
     },
     skill: {
@@ -299,7 +299,7 @@ const TRANSLATIONS = {
       view: {
         title: "View & summarize documents",
         description:
-          "Allow the agent to list and summarize the content of workspace files currently embedded.",
+          "Allow the agent to list and summarize the content of client files currently embedded.",
       },
       scrape: {
         title: "Scrape websites",
@@ -331,14 +331,14 @@ const TRANSLATIONS = {
     },
   },
   recorded: {
-    title: "Workspace Chats",
+    title: "Client Chats",
     description:
       "These are all the recorded chats and messages that have been sent by users ordered by their creation date.",
     export: "Export",
     table: {
       id: "ID",
       by: "Sent By",
-      workspace: "Workspace",
+      workspace: "Client",
       prompt: "Prompt",
       response: "Response",
       at: "Sent At",
@@ -347,16 +347,16 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "UI Preferences",
-      description: "Set your UI preferences for AnythingLLM.",
+      description: "Set your UI preferences for VaultMind.",
     },
     branding: {
       title: "Branding & Whitelabeling",
       description:
-        "White-label your AnythingLLM instance with custom branding.",
+        "White-label your VaultMind instance with custom branding.",
     },
     chat: {
       title: "Chat",
-      description: "Set your chat preferences for AnythingLLM.",
+      description: "Set your chat preferences for VaultMind.",
       auto_submit: {
         title: "Auto-Submit Speech Input",
         description:
@@ -393,7 +393,7 @@ const TRANSLATIONS = {
       "display-language": {
         title: "Display Language",
         description:
-          "Select the preferred language to render AnythingLLM's UI in - when translations are available.",
+          "Select the preferred language to render VaultMind's UI in - when translations are available.",
       },
       logo: {
         title: "Brand Logo",
@@ -411,7 +411,7 @@ const TRANSLATIONS = {
         system: "system",
         user: "user",
         message: "message",
-        assistant: "AnythingLLM Chat Assistant",
+        assistant: "VaultMind Chat Assistant",
         "double-click": "Double click to edit...",
         save: "Save Messages",
       },
@@ -446,7 +446,7 @@ const TRANSLATIONS = {
   api: {
     title: "API Keys",
     description:
-      "API keys allow the holder to programmatically access and manage this AnythingLLM instance.",
+      "API keys allow the holder to programmatically access and manage this VaultMind instance.",
     link: "Read the API documentation",
     generate: "Generate New API Key",
     table: {
@@ -458,7 +458,7 @@ const TRANSLATIONS = {
   llm: {
     title: "LLM Preference",
     description:
-      "These are the credentials and settings for your preferred LLM chat & embedding provider. It is important that these keys are current and correct, or else AnythingLLM will not function properly.",
+      "These are the credentials and settings for your preferred LLM chat & embedding provider. It is important that these keys are current and correct, or else VaultMind will not function properly.",
     provider: "LLM Provider",
     providers: {
       azure_openai: {
@@ -480,7 +480,7 @@ const TRANSLATIONS = {
       "These are the credentials and settings for your preferred transcription model provider. Its important these keys are current and correct or else media files and audio will not transcribe.",
     provider: "Transcription Provider",
     "warn-start":
-      "Using the local whisper model on machines with limited RAM or CPU can stall AnythingLLM when processing media files.",
+      "Using the local whisper model on machines with limited RAM or CPU can stall VaultMind when processing media files.",
     "warn-recommend":
       "We recommend at least 2GB of RAM and upload files <10Mb.",
     "warn-end":
@@ -491,7 +491,7 @@ const TRANSLATIONS = {
     "desc-start":
       "When using an LLM that does not natively support an embedding engine - you may need to additionally specify credentials for embedding text.",
     "desc-end":
-      "Embedding is the process of turning text into vectors. These credentials are required to turn your files and prompts into a format which AnythingLLM can use to process.",
+      "Embedding is the process of turning text into vectors. These credentials are required to turn your files and prompts into a format which VaultMind can use to process.",
     provider: {
       title: "Embedding Provider",
     },
@@ -517,7 +517,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Vector Database",
     description:
-      "These are the credentials and settings for how your AnythingLLM instance will function. It's important these keys are current and correct.",
+      "These are the credentials and settings for how your VaultMind instance will function. It's important these keys are current and correct.",
     provider: {
       title: "Vector Database Provider",
       description: "There is no configuration needed for LanceDB.",
@@ -526,10 +526,10 @@ const TRANSLATIONS = {
   embeddable: {
     title: "Embeddable Chat Widgets",
     description:
-      "Embeddable chat widgets are public facing chat interfaces that are tied to a single workspace. These allow you to build workspaces that then you can publish to the world.",
+      "Embeddable chat widgets are public facing chat interfaces that are tied to a single client. These allow you to build clients that then you can publish to the world.",
     create: "Create embed",
     table: {
-      workspace: "Workspace",
+      workspace: "Client",
       chats: "Sent Chats",
       active: "Active Domains",
       created: "Created",
@@ -566,7 +566,7 @@ const TRANSLATIONS = {
     password: {
       title: "Password Protection",
       description:
-        "Protect your AnythingLLM instance with a password. If you forget this there is no recovery method so ensure you save this password.",
+        "Protect your VaultMind instance with a password. If you forget this there is no recovery method so ensure you save this password.",
       "password-label": "Instance Password",
     },
   },
@@ -584,7 +584,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Privacy & Data-Handling",
     description:
-      "This is your configuration for how connected third party providers and AnythingLLM handle your data.",
+      "This is your configuration for how connected third party providers and VaultMind handle your data. VaultMind is designed to keep all data local — no data leaves your infrastructure unless you explicitly configure a cloud provider.",
     anonymous: "Anonymous Telemetry Enabled",
   },
   connectors: {
@@ -621,7 +621,7 @@ const TRANSLATIONS = {
       git_ignore:
         "List in .gitignore format to ignore specific files during collection. Press enter after each entry you want to save.",
       task_explained:
-        "Once complete, all files will be available for embedding into workspaces in the document picker.",
+        "Once complete, all files will be available for embedding into clients in the document picker.",
       branch: "Branch you wish to collect files from.",
       branch_loading: "-- loading available branches --",
       branch_explained: "Branch you wish to collect files from.",
@@ -651,7 +651,7 @@ const TRANSLATIONS = {
       git_ignore:
         "List in .gitignore format to ignore specific files during collection. Press enter after each entry you want to save.",
       task_explained:
-        "Once complete, all files will be available for embedding into workspaces in the document picker.",
+        "Once complete, all files will be available for embedding into clients in the document picker.",
       branch: "Branch you wish to collect files from",
       branch_loading: "-- loading available branches --",
       branch_explained: "Branch you wish to collect files from.",
@@ -670,7 +670,7 @@ const TRANSLATIONS = {
       URL_explained_link: "closed captions",
       URL_explained_end: " available.",
       task_explained:
-        "Once complete, the transcript will be available for embedding into workspaces in the document picker.",
+        "Once complete, the transcript will be available for embedding into clients in the document picker.",
     },
     "website-depth": {
       name: "Bulk Link Scraper",
@@ -683,7 +683,7 @@ const TRANSLATIONS = {
       max_pages: "Maximum Pages",
       max_pages_explained: "Maximum number of links to scrape.",
       task_explained:
-        "Once complete, all scraped content will be available for embedding into workspaces in the document picker.",
+        "Once complete, all scraped content will be available for embedding into clients in the document picker.",
     },
     confluence: {
       name: "Confluence",
@@ -714,7 +714,7 @@ const TRANSLATIONS = {
       bypass_ssl_explained:
         "Enable this option to bypass SSL certificate validation for self-hosted confluence instances with self-signed certificate",
       task_explained:
-        "Once complete, the page content will be available for embedding into workspaces in the document picker.",
+        "Once complete, the page content will be available for embedding into clients in the document picker.",
     },
     manage: {
       documents: "Documents",
@@ -729,9 +729,9 @@ const TRANSLATIONS = {
       "new-folder": "New Folder",
       "search-document": "Search for document",
       "no-documents": "No Documents",
-      "move-workspace": "Move to Workspace",
+      "move-workspace": "Move to Client",
       "delete-confirmation":
-        "Are you sure you want to delete these files and folders?\nThis will remove the files from the system and remove them from any existing workspaces automatically.\nThis action is not reversible.",
+        "Are you sure you want to delete these files and folders?\nThis will remove the files from the system and remove them from any existing clients automatically.\nThis action is not reversible.",
       "removing-message":
         "Removing {{count}} documents and {{folderCount}} folders. Please wait.",
       "move-success": "Successfully moved {{count}} documents.",
@@ -754,22 +754,22 @@ const TRANSLATIONS = {
       fetching: "Fetching...",
       "fetch-website": "Fetch website",
       "privacy-notice":
-        "These files will be uploaded to the document processor running on this AnythingLLM instance. These files are not sent or shared with a third party.",
+        "These files will be uploaded to the document processor running on this VaultMind instance. All processing happens locally — these files are never sent or shared with any third party.",
     },
     pinning: {
       what_pinning: "What is document pinning?",
       pin_explained_block1:
-        "When you <b>pin</b> a document in AnythingLLM we will inject the entire content of the document into your prompt window for your LLM to fully comprehend.",
+        "When you <b>pin</b> a document in VaultMind we will inject the entire content of the document into your prompt window for your LLM to fully comprehend.",
       pin_explained_block2:
         "This works best with <b>large-context models</b> or small files that are critical to its knowledge-base.",
       pin_explained_block3:
-        "If you are not getting the answers you desire from AnythingLLM by default then pinning is a great way to get higher quality answers in a click.",
+        "If you are not getting the answers you desire from VaultMind by default then pinning is a great way to get higher quality answers in a click.",
       accept: "Okay, got it",
     },
     watching: {
       what_watching: "What does watching a document do?",
       watch_explained_block1:
-        "When you <b>watch</b> a document in AnythingLLM we will <i>automatically</i> sync your document content from it's original source on regular intervals. This will automatically update the content in every workspace where this file is managed.",
+        "When you <b>watch</b> a document in VaultMind we will <i>automatically</i> sync your document content from it's original source on regular intervals. This will automatically update the content in every workspace where this file is managed.",
       watch_explained_block2:
         "This feature currently supports online-based content and will not be available for manually uploaded documents.",
       watch_explained_block3_start:
@@ -785,7 +785,7 @@ const TRANSLATIONS = {
     attach_file: "Attach a file to this chat",
     text_size: "Change text size.",
     microphone: "Speak your prompt.",
-    send: "Send prompt message to workspace",
+    send: "Send prompt message to client",
     tts_speak_message: "TTS Speak message",
     copy: "Copy",
     regenerate: "Regenerate",
@@ -841,11 +841,11 @@ const TRANSLATIONS = {
       "You can use tools in chat by starting an agent session with '@agent' at the beginning of your prompt.",
     workspace_llm_manager: {
       search: "Search",
-      loading_workspace_settings: "Loading workspace settings...",
+      loading_workspace_settings: "Loading client settings...",
       available_models: "Available Models for {{provider}}",
-      available_models_description: "Select a model to use for this workspace.",
+      available_models_description: "Select a model to use for this client.",
       save: "Use this model",
-      saving: "Setting model as workspace default...",
+      saving: "Setting model as client default...",
       missing_credentials: "This provider is missing credentials!",
       missing_credentials_description: "Set up now",
     },
@@ -874,14 +874,14 @@ const TRANSLATIONS = {
     title: "Keyboard Shortcuts",
     shortcuts: {
       settings: "Open Settings",
-      workspaceSettings: "Open Current Workspace Settings",
+      workspaceSettings: "Open Current Client Settings",
       home: "Go to Home",
-      workspaces: "Manage Workspaces",
+      workspaces: "Manage Clients",
       apiKeys: "API Keys Settings",
       llmPreferences: "LLM Preferences",
       chatSettings: "Chat Settings",
       help: "Show keyboard shortcuts help",
-      showLLMSelector: "Show workspace LLM Selector",
+      showLLMSelector: "Show client LLM Selector",
     },
   },
   community_hub: {
@@ -967,7 +967,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "Authentication Required",
           description:
-            "You need to authenticate with the AnythingLLM Community Hub before publishing items.",
+            "You need to authenticate with the VaultMind Community Hub before publishing items.",
           button: "Connect to Community Hub",
         },
       },

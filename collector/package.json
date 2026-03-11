@@ -1,9 +1,9 @@
 {
-  "name": "anything-llm-document-collector",
+  "name": "vaultmind-document-collector",
   "version": "1.11.1",
   "description": "Document collector server endpoints",
   "main": "index.js",
-  "author": "Timothy Carambat (Mintplex Labs)",
+  "author": "4cd4 (based on AnythingLLM by Mintplex Labs)",
   "license": "MIT",
   "private": false,
   "engines": {

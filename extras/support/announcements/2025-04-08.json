@@ -1,10 +1,10 @@
 [
   {
-    "thumbnail_url": "https://cdn.anythingllm.com/support/announcements/assets/mcp.jpg",
+    "thumbnail_url": null,
     "title": "MCP Support",
-    "short_description": "Import and leverage MCP tools using AnythingLLM.",
-    "goto": "https://docs.anythingllm.com/mcp-compatibility/overview",
-    "author": "AnythingLLM",
+    "short_description": "Import and leverage MCP tools using VaultMind.",
+    "goto": "https://github.com/4cd4/ccc/wiki/mcp-compatibility",
+    "author": "VaultMind",
     "date": "April 8, 2025"
   },
   {
@@ -14,13 +14,5 @@
     "goto": "https://blogs.nvidia.com/blog/rtx-ai-garage-nim-blueprints-g-assist",
     "author": "NVIDIA",
     "date": "March 25, 2025"
-  },
-  {
-    "thumbnail_url": null,
-    "title": "Community Hub Updates",
-    "short_description": "We refreshed the Community Hub with a new look and feel. Check it out!",
-    "goto": "https://hub.anythingllm.com",
-    "author": "AnythingLLM",
-    "date": "March 12, 2025"
   }
 ]

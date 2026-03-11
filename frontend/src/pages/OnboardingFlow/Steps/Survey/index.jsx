@@ -129,10 +129,10 @@ export default function Survey({ setHeader, setForwardBtn, setBackBtn }) {
               {t("onboarding.survey.thankYou")}
             </p>
             <a
-              href={paths.mailToMintplex()}
+              href={paths.mailToVaultMind()}
               className="text-sky-400 underline text-xs"
             >
-              team@mintplexlabs.com
+              support@vaultmind.app
             </a>
           </div>
         </div>

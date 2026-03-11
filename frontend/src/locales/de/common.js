@@ -8,7 +8,7 @@ const TRANSLATIONS = {
     llm: {
       title: "LLM-Einstellung",
       description:
-        "AnythingLLM ist mit vielen LLM-Anbietern kompatibel. Der ausgewählte Dienst wird für die Chats verwendet.",
+        "VaultMind ist mit vielen LLM-Anbietern kompatibel. Der ausgewählte Dienst wird für die Chats verwendet.",
     },
     userSetup: {
       title: "Benutzer Setup",
@@ -35,15 +35,15 @@ const TRANSLATIONS = {
         "Diese Einstellungen können jederzeit in den Einstellungen angepasst werden.",
     },
     survey: {
-      title: "Willkommen bei AnythingLLM",
+      title: "Willkommen bei VaultMind",
       description:
-        "Helfen Sie uns, AnythingLLM an Ihre Bedürfnisse anzupassen. (Optional)",
+        "Helfen Sie uns, VaultMind an Ihre Bedürfnisse anzupassen. (Optional)",
       email: "Wie lautet Ihre E-Mail-Adresse?",
-      useCase: "Wofür möchten Sie AnythingLLM verwenden?",
+      useCase: "Wofür möchten Sie VaultMind verwenden?",
       useCaseWork: "Beruflich",
       useCasePersonal: "Privat",
       useCaseOther: "Sonstiges",
-      comment: "Wie haben Sie von AnythingLLM erfahren?",
+      comment: "Wie haben Sie von VaultMind erfahren?",
       commentPlaceholder:
         "Reddit, Twitter, GitHub, YouTube, etc. – Teilen Sie uns mit, wie Sie uns entdeckt haben!",
       skip: "Umfrage überspringen",
@@ -51,7 +51,7 @@ const TRANSLATIONS = {
     },
   },
   common: {
-    "workspaces-name": "Namen der Workspaces",
+    "workspaces-name": "Namen der Clients",
     user: "Benutzer",
     selection: "Modellauswahl",
     saving: "Speichern...",
@@ -69,8 +69,8 @@ const TRANSLATIONS = {
     title: "Instanzeinstellungen",
     invites: "Einladungen",
     users: "Benutzer",
-    workspaces: "Workspaces",
-    "workspace-chats": "Workspace-Chats",
+    workspaces: "Clients",
+    "workspace-chats": "Client-Chats",
     customization: "Personalisierung",
     interface: "UI-Einstellungen",
     branding: "Branding & Whitelabeling",
@@ -94,7 +94,7 @@ const TRANSLATIONS = {
     contact: "Support kontaktieren",
     "browser-extension": "Browser-Extension",
     "system-prompt-variables": "Systempromptvariablen",
-    "mobile-app": "AnythingLLM Mobile",
+    "mobile-app": "VaultMind Mobile",
     "community-hub": {
       title: "Gemeindezentrum",
       trending: "Entdecken Sie die aktuell beliebtesten Themen",
@@ -130,8 +130,8 @@ const TRANSLATIONS = {
     greeting: "Wie kann ich Ihnen heute helfen?",
   },
   "new-workspace": {
-    title: "Neuer Workspace",
-    placeholder: "Mein Workspace",
+    title: "Neuer Client",
+    placeholder: "Mein Client",
   },
   "workspaces—settings": {
     general: "Allgemeine Einstellungen",
@@ -146,7 +146,7 @@ const TRANSLATIONS = {
       description: "Gesamtanzahl der Vektoren in Ihrer Vektordatenbank.",
     },
     names: {
-      description: "Dies ändert nur den Anzeigenamen Ihres Workspace.",
+      description: "Dies ändert nur den Anzeigenamen Ihres Client.",
     },
     message: {
       title: "Vorgeschlagene Chat-Nachrichten",
@@ -155,14 +155,14 @@ const TRANSLATIONS = {
       add: "Neue Nachricht hinzufügen",
       save: "Nachrichten speichern",
       heading: "Erkläre mir",
-      body: "die Vorteile von AnythingLLM",
+      body: "die Vorteile von VaultMind",
     },
     delete: {
-      title: "Workspace löschen",
+      title: "Client löschen",
       description:
         "Löschen Sie diesen Workspace und alle seine Daten. Dies löscht den Workspace für alle Benutzer.",
-      delete: "Workspace löschen",
-      deleting: "Workspace wird gelöscht...",
+      delete: "Client löschen",
+      deleting: "Client wird gelöscht...",
       "confirm-start": "Sie sind dabei, Ihren gesamten",
       "confirm-end":
         "Workspace zu löschen. Dies entfernt alle Vektoreinbettungen in Ihrer Vektordatenbank.\n\nDie ursprünglichen Quelldateien bleiben unberührt. Diese Aktion ist irreversibel.",
@@ -170,13 +170,13 @@ const TRANSLATIONS = {
   },
   chat: {
     llm: {
-      title: "Workspace-LLM-Anbieter",
+      title: "Client-LLM-Anbieter",
       description:
         "Der spezifische LLM-Anbieter und das Modell, das für diesen Workspace verwendet wird. Standardmäßig wird der System-LLM-Anbieter und dessen Einstellungen verwendet.",
       search: "Durchsuchen Sie alle LLM-Anbieter",
     },
     model: {
-      title: "Workspace-Chat-Modell",
+      title: "Client-Chat-Modell",
       description:
         "Das spezifische Chat-Modell, das für diesen Workspace verwendet wird. Wenn leer, wird die System-LLM-Präferenz verwendet.",
     },
@@ -261,23 +261,23 @@ const TRANSLATIONS = {
       resetting: "Vektoren werden gelöscht...",
       confirm:
         "Sie sind dabei, die Vektordatenbank dieses Workspace zurückzusetzen. Dies entfernt alle derzeit eingebetteten Vektoreinbettungen.\n\nDie ursprünglichen Quelldateien bleiben unberührt. Diese Aktion ist irreversibel.",
-      error: "Die Workspace-Vektordatenbank konnte nicht zurückgesetzt werden!",
-      success: "Die Workspace-Vektordatenbank wurde zurückgesetzt!",
+      error: "Die Client-Vektordatenbank konnte nicht zurückgesetzt werden!",
+      success: "Die Client-Vektordatenbank wurde zurückgesetzt!",
     },
   },
   agent: {
     provider: {
-      title: "Workspace-Agent LLM-Anbieter",
+      title: "Client-Agent LLM-Anbieter",
       description:
         "Der spezifische LLM-Anbieter und das Modell, das für den @agent-Agenten dieses Workspace verwendet wird.",
     },
     mode: {
       chat: {
-        title: "Workspace-Agent Chat-Modell",
+        title: "Client-Agent Chat-Modell",
         description:
           "Das spezifische Chat-Modell, das für den @agent-Agenten dieses Workspace verwendet wird.",
       },
-      title: "Workspace-Agent-Modell",
+      title: "Client-Agent-Modell",
       description:
         "Das spezifische LLM-Modell, das für den @agent-Agenten dieses Workspace verwendet wird.",
       wait: "-- warte auf Modelle --",
@@ -325,14 +325,14 @@ const TRANSLATIONS = {
       "Die Leistung von LLMs, die keine explizite Unterstützung für das Aufrufen von Tools bieten, hängt stark von den Fähigkeiten und der Genauigkeit des Modells ab. Einige Fähigkeiten können eingeschränkt oder nicht funktionsfähig sein.",
   },
   recorded: {
-    title: "Workspace-Chats",
+    title: "Client-Chats",
     description:
       "Dies sind alle aufgezeichneten Chats und Nachrichten, die von Benutzern gesendet wurden, geordnet nach ihrem Erstellungsdatum.",
     export: "Exportieren",
     table: {
       id: "Id",
       by: "Gesendet von",
-      workspace: "Workspace",
+      workspace: "Client",
       prompt: "Prompt",
       response: "Antwort",
       at: "Gesendet am",
@@ -341,16 +341,16 @@ const TRANSLATIONS = {
   customization: {
     interface: {
       title: "UI Einstellungen",
-      description: "Passen Sie die Benutzeroberfläche von AnythingLLM an.",
+      description: "Passen Sie die Benutzeroberfläche von VaultMind an.",
     },
     branding: {
       title: "Branding & Whitelabeling",
       description:
-        "Individualisieren Sie Ihre AnythingLLM-Instanz durch eigenes Branding.",
+        "Individualisieren Sie Ihre VaultMind-Instanz durch eigenes Branding.",
     },
     chat: {
       title: "Chat",
-      description: "Passen Sie Ihre Chat-Einstellungen für AnythingLLM an.",
+      description: "Passen Sie Ihre Chat-Einstellungen für VaultMind an.",
       auto_submit: {
         title: "Spracheingaben automatisch senden",
         description:
@@ -407,7 +407,7 @@ const TRANSLATIONS = {
         system: "System",
         user: "Benutzer",
         message: "Nachricht",
-        assistant: "AnythingLLM Chat-Assistent",
+        assistant: "VaultMind Chat-Assistent",
         "double-click": "Zum Bearbeiten doppelklicken",
         save: "Nachrichten speichern",
       },
@@ -442,7 +442,7 @@ const TRANSLATIONS = {
   api: {
     title: "API-Schlüssel",
     description:
-      "API-Schlüssel ermöglichen es dem Besitzer, programmatisch auf diese AnythingLLM-Instanz zuzugreifen und sie zu verwalten.",
+      "API-Schlüssel ermöglichen es dem Besitzer, programmatisch auf diese VaultMind-Instanz zuzugreifen und sie zu verwalten.",
     link: "Lesen Sie die API-Dokumentation",
     generate: "Neuen API-Schlüssel generieren",
     table: {
@@ -454,7 +454,7 @@ const TRANSLATIONS = {
   llm: {
     title: "LLM-Präferenz",
     description:
-      "Dies sind die Anmeldeinformationen und Einstellungen für Ihren bevorzugten LLM-Chat- und Einbettungsanbieter. Es ist wichtig, dass diese Schlüssel aktuell und korrekt sind, sonst wird AnythingLLM nicht richtig funktionieren.",
+      "Dies sind die Anmeldeinformationen und Einstellungen für Ihren bevorzugten LLM-Chat- und Einbettungsanbieter. Es ist wichtig, dass diese Schlüssel aktuell und korrekt sind, sonst wird VaultMind nicht richtig funktionieren.",
     provider: "LLM-Anbieter",
     providers: {
       azure_openai: {
@@ -476,7 +476,7 @@ const TRANSLATIONS = {
       "Dies sind die Anmeldeinformationen und Einstellungen für Ihren bevorzugten Transkriptionsmodellanbieter. Es ist wichtig, dass diese Schlüssel aktuell und korrekt sind, sonst werden Mediendateien und Audio nicht transkribiert.",
     provider: "Transkriptionsanbieter",
     "warn-start":
-      "Die Verwendung des lokalen Whisper-Modells auf Maschinen mit begrenztem RAM oder CPU kann AnythingLLM bei der Verarbeitung von Mediendateien zum Stillstand bringen.",
+      "Die Verwendung des lokalen Whisper-Modells auf Maschinen mit begrenztem RAM oder CPU kann VaultMind bei der Verarbeitung von Mediendateien zum Stillstand bringen.",
     "warn-recommend":
       "Wir empfehlen mindestens 2 GB RAM und das Hochladen von Dateien <10 MB.",
     "warn-end":
@@ -487,7 +487,7 @@ const TRANSLATIONS = {
     "desc-start":
       "Bei der Verwendung eines LLM, das keine native Unterstützung für eine Einbettungs-Engine bietet, müssen Sie möglicherweise zusätzlich Anmeldeinformationen für die Texteinbettung angeben.",
     "desc-end":
-      "Einbettung ist der Prozess, Text in Vektoren umzuwandeln. Diese Anmeldeinformationen sind erforderlich, um Ihre Dateien und Prompts in ein Format umzuwandeln, das AnythingLLM zur Verarbeitung verwenden kann.",
+      "Einbettung ist der Prozess, Text in Vektoren umzuwandeln. Diese Anmeldeinformationen sind erforderlich, um Ihre Dateien und Prompts in ein Format umzuwandeln, das VaultMind zur Verarbeitung verwenden kann.",
     provider: {
       title: "Einbettungsanbieter",
     },
@@ -513,7 +513,7 @@ const TRANSLATIONS = {
   vector: {
     title: "Vektordatenbank",
     description:
-      "Dies sind die Anmeldeinformationen und Einstellungen für die Funktionsweise Ihrer AnythingLLM-Instanz. Es ist wichtig, dass diese Schlüssel aktuell und korrekt sind.",
+      "Dies sind die Anmeldeinformationen und Einstellungen für die Funktionsweise Ihrer VaultMind-Instanz. Es ist wichtig, dass diese Schlüssel aktuell und korrekt sind.",
     provider: {
       title: "Vektordatenbankanbieter",
       description: "Für LanceDB ist keine Konfiguration erforderlich.",
@@ -525,7 +525,7 @@ const TRANSLATIONS = {
       "Einbettbare Chat-Widgets sind öffentlich zugängliche Chat-Schnittstellen, die an einen einzelnen Workspace gebunden sind. Diese ermöglichen es Ihnen, Workspaces zu erstellen, die Sie dann weltweit veröffentlichen können.",
     create: "Einbettung erstellen",
     table: {
-      workspace: "Workspace",
+      workspace: "Client",
       chats: "Gesendete Chats",
       active: "Aktive Domains",
       created: "Erstellt",
@@ -558,7 +558,7 @@ const TRANSLATIONS = {
   privacy: {
     title: "Datenschutz & Datenverarbeitung",
     description:
-      "Dies ist Ihre Konfiguration dafür, wie verbundene Drittanbieter und AnythingLLM Ihre Daten behandeln.",
+      "Dies ist Ihre Konfiguration dafür, wie verbundene Drittanbieter und VaultMind Ihre Daten behandeln.",
     anonymous: "Anonyme Telemetrie aktiviert",
   },
   connectors: {
@@ -705,7 +705,7 @@ const TRANSLATIONS = {
       "new-folder": "Neuer Ordner",
       "search-document": "Dokument suchen",
       "no-documents": "Keine Dokumente",
-      "move-workspace": "In Workspace verschieben",
+      "move-workspace": "In Client verschieben",
       "delete-confirmation":
         "Sind Sie sicher, dass Sie diese Dateien und Ordner löschen möchten?\nDies wird die Dateien vom System entfernen und sie automatisch aus allen vorhandenen Workspaces entfernen.\nDiese Aktion kann nicht rückgängig gemacht werden.",
       "removing-message":
@@ -731,7 +731,7 @@ const TRANSLATIONS = {
       fetching: "Wird abgerufen...",
       "fetch-website": "Website abrufen",
       "privacy-notice":
-        "Diese Dateien werden zum Dokumentenprozessor hochgeladen, der auf dieser AnythingLLM-Instanz läuft. Diese Dateien werden nicht an Dritte gesendet oder geteilt.",
+        "Diese Dateien werden zum Dokumentenprozessor hochgeladen, der auf dieser VaultMind-Instanz läuft. Diese Dateien werden nicht an Dritte gesendet oder geteilt.",
     },
     pinning: {
       what_pinning: "Was bedeutet es Dokumente anzuheften?",
@@ -762,7 +762,7 @@ const TRANSLATIONS = {
     attach_file: "Füge eine Datei zum Chat hinzu",
     text_size: "Ändere die Größe des Textes.",
     microphone: "Spreche deinen Prompt ein.",
-    send: "Versende den Prompt an den Workspace.",
+    send: "Versende den Prompt an den Client.",
     tts_speak_message: "Nachricht vorlesen (TTS)",
     copy: "Kopieren",
     regenerate: "Neu generieren",
@@ -787,12 +787,12 @@ const TRANSLATIONS = {
     large: "Groß",
     workspace_llm_manager: {
       search: "LLM-Provider durchsuchen",
-      loading_workspace_settings: "Workspace-Einstellungen werden geladen",
+      loading_workspace_settings: "Client-Einstellungen werden geladen",
       available_models: "Verfügbare Modelle von {{provider}}",
       available_models_description:
         "Wählen Sie ein Modell für diesen Workspace",
       save: "Modell verwenden",
-      saving: "Standardmodell für Workspace wird eingestellt...",
+      saving: "Standardmodell für Client wird eingestellt...",
       missing_credentials: "Für diesen Anbieter fehlen Anmeldedaten!",
       missing_credentials_description: "Klicken, um Zugangsdaten einzurichten",
     },
@@ -851,14 +851,14 @@ const TRANSLATIONS = {
     title: "Tastaturkürzel",
     shortcuts: {
       settings: "Einstellungen öffnen",
-      workspaceSettings: "Workspace Einstellungen öffnen",
+      workspaceSettings: "Client Einstellungen öffnen",
       home: "Zur Startseite",
-      workspaces: "Workspaces verwalten",
+      workspaces: "Clients verwalten",
       apiKeys: "API-Schlüssel Einstellungen",
       llmPreferences: "LLM-Einstellungen",
       chatSettings: "Chat Einstellungen",
       help: "Tastenkürzel Hilfe anzeigen",
-      showLLMSelector: "LLM-Auswahl für Workspace zeigen",
+      showLLMSelector: "LLM-Auswahl für Client zeigen",
     },
   },
   community_hub: {
@@ -921,7 +921,7 @@ const TRANSLATIONS = {
         unauthenticated: {
           title: "Benötigte Authentifizierung",
           description:
-            "Sie müssen sich vor der Veröffentlichung von Inhalten über den AnythingLLM Community Hub authentifizieren.",
+            "Sie müssen sich vor der Veröffentlichung von Inhalten über den VaultMind Community Hub authentifizieren.",
           button: "Verbinden Sie sich mit dem Community Hub",
         },
       },
@@ -975,7 +975,7 @@ const TRANSLATIONS = {
     password: {
       title: "Passwortschutz",
       description:
-        "Schützen Sie Ihre AnythingLLM-Instanz mit einem Passwort. Wenn Sie dieses vergessen, gibt es keine Wiederherstellungsmethode, also stellen Sie sicher, dass Sie dieses Passwort speichern.",
+        "Schützen Sie Ihre VaultMind-Instanz mit einem Passwort. Wenn Sie dieses vergessen, gibt es keine Wiederherstellungsmethode, also stellen Sie sicher, dass Sie dieses Passwort speichern.",
       "password-label": "Instanzpasswort",
     },
   },
@@ -984,7 +984,7 @@ const TRANSLATIONS = {
     chooseWorkspace: "Wählen Sie ein Arbeitsbereich, um zu beginnen!",
     notAssigned:
       "Sie sind nicht zugewiesen zu einem Arbeitsbereich.\nBitte kontaktieren Sie Ihren Administrator, um Zugriff auf einen Arbeitsbereich zu erhalten.",
-    goToWorkspace: 'Zurück zum Arbeitsbereich "{{workspace}}"',
+    goToWorkspace: 'Zurück zum Arbeitsbereich "{{client}}"',
   },
 };
 
