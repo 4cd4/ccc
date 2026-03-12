@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "google-workspace": {
+      "command": "uvx",
+      "args": ["workspace-mcp", "--tool-tier", "core"],
+      "env": {
+        "GOOGLE_OAUTH_CLIENT_ID": "YOUR_GOOGLE_CLIENT_ID",
+        "GOOGLE_OAUTH_CLIENT_SECRET": "YOUR_GOOGLE_CLIENT_SECRET"
+      },
+      "anythingllm": {
+        "autoStart": false,
+        "description": "Google Workspace MCP - Gmail, Google Drive, Google Calendar, Docs, Sheets. Setup: Create OAuth 2.0 Desktop credentials at https://console.cloud.google.com/apis/credentials and enable Gmail, Drive, Calendar APIs."
+      }
+    },
+    "outlook-microsoft365": {
+      "command": "npx",
+      "args": ["-y", "outlook-mcp"],
+      "env": {
+        "MS_CLIENT_ID": "YOUR_AZURE_CLIENT_ID",
+        "MS_CLIENT_SECRET": "YOUR_AZURE_CLIENT_SECRET",
+        "MS_TENANT_ID": "YOUR_AZURE_TENANT_ID"
+      },
+      "anythingllm": {
+        "autoStart": false,
+        "description": "Microsoft 365 MCP - Outlook Mail, Calendar, OneDrive. Setup: Register app at https://portal.azure.com > App registrations. Add delegated permissions: Mail.Read, Mail.ReadWrite, Mail.Send, Calendars.ReadWrite, Files.ReadWrite."
+      }
+    }
+  }
+}
